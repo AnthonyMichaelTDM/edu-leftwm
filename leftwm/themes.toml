@@ -211,8 +211,7 @@ definitions_version = 0
 
 [[repos.themes]]
 name = "candy"
-directory = "/home/ruby/.config/leftwm/themes/candy"
-version = "0.0.0"
+version = "2.4.1"
 leftwm_versions = "*"
 current = false
 
@@ -449,7 +448,6 @@ definitions_version = 1
 
 [[repos.themes]]
 name = "master-pywal-theme"
-directory = "/home/ruby/.config/leftwm/themes/master-pywal-theme"
 repository = "https://github.com/AnthonyMichaelTDM/master-pywal-theme/"
 commit = "*"
 version = "2.0.0"
