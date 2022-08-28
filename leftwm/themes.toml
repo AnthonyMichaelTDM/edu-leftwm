@@ -13,7 +13,7 @@ definitions_version = 0
 name = "candy"
 version = "2.4.1"
 leftwm_versions = "*"
-current = false
+current = true
 
 [[repos]]
 url = "https://raw.githubusercontent.com/arcolinux/arcolinux-leftwm-themes/master/known.toml"
