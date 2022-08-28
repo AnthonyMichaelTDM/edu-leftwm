@@ -29,6 +29,6 @@ themes = []
 
 [[repos]]
 url = "https://raw.githubusercontent.com/AnthonyMichaelTDM/leftwm-personal-themes/main/known.toml"
-name = "Personal"
+name = "Genesis Repo"
 definitions_version = 1
 themes = []
