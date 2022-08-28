@@ -1,7 +1,7 @@
 [[repos]]
 url = "https://raw.githubusercontent.com/leftwm/leftwm-community-themes/master/known.toml"
 name = "community"
-definitions_version = 0
+definitions_version = 1
 themes = []
 
 [[repos]]
@@ -30,5 +30,5 @@ themes = []
 [[repos]]
 url = "https://raw.githubusercontent.com/AnthonyMichaelTDM/leftwm-personal-themes/main/known.toml"
 name = "Personal"
-definitions_version = 2
+definitions_version = 1
 themes = []
