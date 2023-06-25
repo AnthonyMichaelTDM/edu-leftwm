@@ -488,9 +488,8 @@ current = false
 
 [[repos.themes]]
 name = "mpt-tablet"
-directory = "/home/anthony/.config/leftwm/themes/mpt-tablet"
 repository = "https://github.com/AnthonyMichaelTDM/mpt-tablet/"
 commit = "*"
 version = "2.0.0"
 leftwm_versions = "*"
-current = true
+current = false
