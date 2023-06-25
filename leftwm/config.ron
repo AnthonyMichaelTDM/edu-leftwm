@@ -15,9 +15,9 @@
     modkey: "Mod4",
     mousekey: "Mod4",
     workspaces: [],
-    tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    // tags = ["", "", "", "", "", "", "", "", ""]
-    // tags = ["www", "edit", "gimp", "inkscape", "meld", "video","vm", "files", "music"]
+    tags: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+    // tags: ["", "", "", "", "", "", "", "", ""],
+    // tags: ["www", "edit", "gimp", "inkscape", "meld", "video","vm", "files", "music"],
 
     max_window_width: None,
     layouts: [
@@ -45,7 +45,7 @@
         //    x: 0.2, y: 0.05, height: 0.3, width: 0.8 
         //)
     ],
-    window_rules: [],
+    window_rules: [( window_class: "xfce4-notifyd", spawn_floating: true ),],
     
     disable_current_tag_swap: true,
     disable_tile_drag: false,
@@ -99,7 +99,7 @@
             modifier: ["modkey"], key: "9"),
         (command: Execute, value: "leftwm-command \"SendWindowToTag 9\" \"SendWorkspaceToTag 0 8\"",
             modifier: ["modkey", "Shift"], key: "9"),
-        (command: Execute, value: "~/.config/leftwm/themes/current/scripts/wal.sh",
+        (command: Execute, value: "~/.config/leftwm/themes/current/scripts/changewalnext.sh",
             modifier: ["modkey"], key: "equal"),
         
         // 0-

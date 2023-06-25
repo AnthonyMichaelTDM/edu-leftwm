@@ -38,9 +38,9 @@ super + F7
 super + F8
     thunar
 
-#git kraken
+#Parole
 super + F9
-    gitkraken
+    parole
 
 #Discord
 super + F10
@@ -48,7 +48,7 @@ super + F10
 
 #Rofi Fullscreen
 super + F11
-    rofi -theme-str 'window \{width: 100%;height 100%\}' -show drun
+    rofi -theme-str 'window \{width: 100%;height: 100%;\}' -show drun
 
 #Rofi
 super + F12
@@ -148,9 +148,9 @@ super + shift + KP_Enter
 ctrl + alt + w
      arcolinux-welcome-app
 
-#arcolinux-tweak-tool
+#archlinux-tweak-tool
 ctrl + alt + e
-    arcolinux-tweak-tool
+    archlinux-tweak-tool
 
 #conky-rotate
 #ctrl + alt + Next
@@ -180,13 +180,13 @@ ctrl + alt + f
 #ctrl + alt + i
 #     nitrogen
 
-#arcolinux-logout
+#archlinux-logout
 ctrl + alt + k
-     arcolinux-logout
+     archlinux-logout
 
-#arcolinux-logout
+#archlinux-logout
 ctrl + alt + l
-    arcolinux-logout
+    archlinux-logout
 
 #Pamac-manager
 ctrl + alt + p
@@ -226,7 +226,7 @@ ctrl + alt + t
 
 
 #Keyboard dependent
-#urxvt
+#alacritty
 ctrl + alt + KP_Enter
     alacritty
 
@@ -277,7 +277,7 @@ ctrl + alt + KP_Enter
 
 #xlunch app launcher
 #alt + F3
-#    xlunch --config ~/.config/xlunch/default.conf --input ~/config/xlunch/entries.dsv
+#    xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv
 
 
 #################################################################
@@ -327,7 +327,7 @@ ctrl + Print
 
 #screenshot a region
 super + shift + s
-     xfce4-screenshooter -r
+     xfce4-screenshooter -r -c
 
 #Gnome-Screenshot
 #ctrl + shift + Print
@@ -389,7 +389,7 @@ XF86AudioStop
     playerctl stop
 
 #Brightness up
-XF86MonBrightnessUp
+XF86MonBrightnessUp #use brightnessctl if this doesn't work
     xbacklight -inc 10
 
 #Brightness down
@@ -401,8 +401,8 @@ XF86MonBrightnessDown
 #########################
 
 #Hide polybar, redundant in config.toml
-super + b
-    polybar-msg cmd toggle
+#super + b
+#    polybar-msg cmd toggle
 
 #################################################################
 #################################################################
@@ -416,7 +416,7 @@ super + b
 
 #Picom Toggle
 ctrl + alt + o
-    ~/.config/leftwm/themes/current/scripts/picom-toggle.sh
+    ~/.config/leftwm/scripts/picom-toggle.sh
 
 #################################################################
 # SUPER + KEYS
@@ -445,3 +445,4 @@ ctrl + alt + o
 #################################################################
 # CTRL + ALT KEYS
 #################################################################
+
