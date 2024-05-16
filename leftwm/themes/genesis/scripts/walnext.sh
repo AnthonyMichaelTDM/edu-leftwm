@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ### Check if python-pywal is installed
 if [ -x "$(command -v wal)" ]; then
   #use pywal to generate color schemes for almost everything
@@ -6,7 +6,6 @@ if [ -x "$(command -v wal)" ]; then
 else
   # Set background
   if [ -x "$(command -v feh)" ]; then
-    feh --randomize --bg-fill $HOME/.config/leftwm/themes/current/backgrounds/*
-      ####feh --randomize --bg-fill /usr/share/backgrounds/*
+    feh --randomize --bg-fill /usr/share/backgrounds/*
   fi
 fi

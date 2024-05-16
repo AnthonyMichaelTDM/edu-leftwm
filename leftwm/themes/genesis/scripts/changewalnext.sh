@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ### Check if python-pywal is installed
 if [ -x "$(command -v wal)" ]; then
   #use pywal to generate color schemes for almost everything

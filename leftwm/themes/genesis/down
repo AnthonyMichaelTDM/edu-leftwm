@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
@@ -13,11 +13,12 @@ pkill polybar
 #while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 pkill compton
 pkill picom
-pkill conky
-pkill dunst
 pkill sxhkd
-pkill volumeicon
 pkill nm-applet
 pkill pamac-tray
+pkill xfce4-power-manager
 pkill blueberry-tray
+pkill polkit-gnome-authentication-agent-1
+pkill xfce4-notifyd
 pkill xfce4-clipman
+pkill flameshot

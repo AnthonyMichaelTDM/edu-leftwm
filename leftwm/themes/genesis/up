@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 export SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 # Down the last running theme
@@ -23,8 +23,8 @@ numlockx on &
 blueberry-tray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
-volumeicon &
 xfce4-clipman &
+flameshot &
 #conky -c ~/.config/leftwm/system-overview &
 #nitrogen --restore &
 #caffeine &

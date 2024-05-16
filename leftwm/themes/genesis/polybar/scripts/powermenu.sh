@@ -31,12 +31,12 @@ case $chosen in
 		systemctl reboot
         ;;
     $lock)
-		if [[ -f /usr/bin/i3lock ]]; then
-			convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) $SCREEN -blur 0x4 $SCRIPTPATH/blurlock.png
-            i3lock -i $SCRIPTPATH/blurlock.png
-		elif [[ -f /usr/bin/betterlockscreen ]]; then
+		if [[ -f /usr/bin/betterlockscreen ]]; then
 			convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) $SCREEN -blur 0x4 $SCRIPTPATH/blurlock.png
             betterlockscreen -l $SCRIPTPATH/blurlock.png
+		elif [[ -f /usr/bin/i3lock ]]; then
+			convert -resize $(xdpyinfo | grep dimensions | cut -d\  -f7 | cut -dx -f1) $SCREEN -blur 0x4 $SCRIPTPATH/blurlock.png
+            i3lock -i $SCRIPTPATH/blurlock.png
 		fi
         ;;
     $suspend)

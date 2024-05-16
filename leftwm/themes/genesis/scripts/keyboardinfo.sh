@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 ### variables
 layout="$(setxkbmap -query | sed -n -e 's/^layout: \+//p')"
