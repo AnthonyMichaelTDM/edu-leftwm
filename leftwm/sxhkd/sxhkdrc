@@ -208,10 +208,6 @@ ctrl + alt + r
 #ctrl + alt + s
 #   spotify
 
-#alacritty
-ctrl + alt + Return
-    alacritty
-
 #urxvt
 ctrl + alt + t
     urxvt
@@ -224,6 +220,9 @@ ctrl + alt + t
 #ctrl + alt + a
 #    xfce4-appfinder
 
+#alacritty
+ctrl + alt + Return
+    alacritty
 
 #Keyboard dependent
 #alacritty
@@ -333,9 +332,9 @@ super + shift + s
 #ctrl + shift + Print
 #     gnome-screenshot -i
 
-#Flameshot
-#super + ctrl + Print
-#    flameshot gui
+Flameshot
+super + ctrl + Print
+    flameshot gui
 
 
 #################################################################
@@ -389,12 +388,14 @@ XF86AudioStop
     playerctl stop
 
 #Brightness up
-XF86MonBrightnessUp #use brightnessctl if this doesn't work
-    xbacklight -inc 10
+XF86MonBrightnessUp
+    xbacklight -inc 10 
+    # brightnessctl set +10
 
 #Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10
+    brightnessctl set 10-
 
 #########################
 #        POLYBAR        #

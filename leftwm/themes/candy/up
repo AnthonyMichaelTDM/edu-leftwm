@@ -8,6 +8,10 @@ if [ -f "/tmp/leftwm-theme-down" ]; then
 fi
 ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 
+########## This script makes the colors of your polybar and terminals#########
+sh $SCRIPTPATH/scripts/wal.sh
+##############################################################################
+
 # keybindings daemon
 sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
 
@@ -20,7 +24,8 @@ blueberry-tray &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 volumeicon &
-conky -c ~/.config/leftwm/system-overview &
+xfce4-clipman &
+#conky -c ~/.config/leftwm/system-overview &
 #nitrogen --restore &
 #caffeine &
 #vivaldi-stable &
@@ -34,7 +39,7 @@ conky -c ~/.config/leftwm/system-overview &
 
 # Boot picom or compton if it exists
 if [ -x "$(command -v picom)" ]; then
-  picom --config $HOME/.config/leftwm/themes/current/picom.conf &> /dev/null &
+  picom --config "$SCRIPTPATH"/picom.conf &> /dev/null &
   #picom --config $HOME/.config/leftwm/themes/current/picom.conf --experimental-backends &> /dev/null &
   #picom &> /dev/null &
   #picom --experimental-backends &> /dev/null &
@@ -42,8 +47,17 @@ elif [ -x "$(command -v compton)" ]; then
   compton --config $HOME/.config/leftwm/themes/current/compton.conf &> /dev/null &
 fi
 
-# Set the theme.ron config
-leftwm command "LoadTheme $SCRIPTPATH/theme.ron"
+#Set the theme.ron config
+leftwm-command "LoadTheme $SCRIPTPATH/theme.ron"
+
+### Check if template dir exists, then put template in its proper place
+if [ ! -d $HOME/.config/wal/templates ] ; then
+  mkdir $HOME/.config/wal/templates &&
+  cp $SCRIPTPATH/template-wal/color.leftwm-theme.ron  $HOME/.config/wal/templates
+elif [ ! -f $HOME/.config/wal/templates/color.leftwm-theme.ron ] ; then
+  cp $SCRIPTPATH/template-wal/color.leftwm-theme.ron  $HOME/.config/wal/templates
+fi
+
 
 # Set background
 if [ -x "$(command -v feh)" ]; then
@@ -56,6 +70,7 @@ monitors=($(polybar -m | sed s/:.*//))
 leftwm-state -q -n -t "$SCRIPTPATH"/sizes.liquid | sed -r '/^\s*$/d' | while read -r width x y
 do
   barname="mainbar$index"
-  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybartop.config $barname &> /dev/null &
+  monitor=${monitors[index]} width=$(( width - 16 )) polybar -c "$SCRIPTPATH"/polybar/polybarbottom.config $barname &> /dev/null &
   let index=index+1
 done

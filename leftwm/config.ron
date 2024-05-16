@@ -162,10 +162,8 @@
         // z
         (command: Execute, value: "archlinux-logout", 
             modifier: ["modkey"], key: "x"),
-        (command: Execute, value: "urxvt -e vim ~/.config/leftwm/themes/current/config.ron ; ~/.config/leftwm/themes/current/scripts/copyConfigRON.sh",
+        (command: Execute, value: "urxvt -e vim ~/.config/leftwm/config.ron",
             modifier: ["modkey"], key: "c"),
-        (command: Execute, value: "killall conky", 
-            modifier: ["modkey", "Shift"], key: "c"),
         // v
         (command: Execute, value: "polybar-msg cmd toggle",
             modifier: ["modkey"], key: "b"),

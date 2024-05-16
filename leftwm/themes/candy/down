@@ -10,9 +10,14 @@ fi
 leftwm-command "UnloadTheme"
 
 pkill polybar
+#while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 pkill compton
 pkill picom
 pkill conky
 pkill dunst
 pkill sxhkd
 pkill volumeicon
+pkill nm-applet
+pkill pamac-tray
+pkill blueberry-tray
+pkill xfce4-clipman
