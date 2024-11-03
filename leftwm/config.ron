@@ -23,8 +23,7 @@
     layouts: [
         "MainAndVertStack",
         "MainAndHorizontalStack",
-        "MainAndDeck",
-        "GridHorizontal",
+        "MainAndDeck", 
         "EvenHorizontal",
         "EvenVertical",
         "Fibonacci",
@@ -32,8 +31,6 @@
         "CenterMainBalanced",
         "CenterMainFluid",
         "Monocle",
-        "RightWiderLeftStack",
-        "LeftWiderRightStack",
     ],
     layout_mode: Tag,
     insert_behavior: Bottom,
