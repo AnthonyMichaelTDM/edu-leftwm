@@ -71,15 +71,16 @@ super + F12
 #    conky-toggle
 
 #Htop
-super + h
+super + ctrl + h
     urxvt 'htop task manager' -e htop
 
 #arcolinux-logout
 super + x
+    archlinux-logout
 
 #Rofi theme selector
-super + r
-    rofi-theme-selector
+# super + r
+#     rofi-theme-selector
 
 #Rofi run
 super + d

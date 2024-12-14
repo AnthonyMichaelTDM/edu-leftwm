@@ -11,7 +11,7 @@
 // https://github.com/leftwm/leftwm/blob/master/src/utils/xkeysym_lookup.rs
 
 #![enable(implicit_some)]
-(
+( 
     modkey: "Mod4",
     mousekey: "Mod4",
     workspaces: [],
@@ -137,9 +137,11 @@
         (command: Execute, value: "thunar",
             modifier: ["modkey", "Shift"], key: "f"),
         (command: Execute, value: "leftwm-command ToggleFullScreen",
-            modifier: ["modkey"], key: "f"),
-        // g and h should control gaps, not possible :(
-        // g 
+            modifier: ["modkey"], key: "f"), 
+        (command: IncreaseMainWidth, value: "5",
+            modifier: ["modkey"], key: "g"),
+        (command: DecreaseMainWidth, value: "5",
+            modifier: ["modkey"], key: "h"), 
         (command: FocusWorkspacePrevious, value: "",
             modifier: ["modkey", "Shift"], key: "h"),
         (command: FocusWindowDown, value: "",
