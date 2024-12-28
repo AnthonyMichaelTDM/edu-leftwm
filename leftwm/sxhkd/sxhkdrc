@@ -396,7 +396,7 @@ XF86MonBrightnessUp
 #Brightness down
 XF86MonBrightnessDown
     xbacklight -dec 10
-    brightnessctl set 10-
+    # brightnessctl set 10-
 
 #########################
 #        POLYBAR        #
