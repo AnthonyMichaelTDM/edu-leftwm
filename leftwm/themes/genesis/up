@@ -15,16 +15,31 @@ sh $SCRIPTPATH/scripts/wal.sh
 # keybindings daemon
 sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
 
-# diversity of apps to start
-nm-applet &
-pamac-tray &
-xfce4-power-manager &
-numlockx on &
-blueberry-tray &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-xfce4-clipman &
-flameshot &
+# diversity of apps to start (start only if they are not already running)
+if [ -x "$(command -v nm-applet)" ]; then
+  pgrep -x nm-applet || nm-applet &
+fi
+if [ -x "$(command -v pamac-tray)" ]; then
+  pgrep -x pamac-tray || pamac-tray &
+fi
+if [ -x "$(command -v numlockx)" ]; then
+  pgrep -x numlockx || numlockx on &
+fi
+if [ -x "$(command -v blueberry-tray)" ]; then
+  pgrep -x blueberry-tray || blueberry-tray &
+fi
+if [ -f "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1" ]; then
+  pgrep -f /usr/lib/polkit-gnome || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+fi
+if [ -f "/usr/lib/xfce4/notifyd/xfce4-notifyd" ]; then
+  pgrep -x xfce4-notifyd || /usr/lib/xfce4/notifyd/xfce4-notifyd &
+fi
+if [ -x "$(command -v xfce4-clipman)" ]; then
+  pgrep -x xfce4-clipman || xfce4-clipman &
+fi
+if [ -x "$(command -v flameshot)" ]; then
+  pgrep -x flameshot || flameshot &
+fi
 #conky -c ~/.config/leftwm/system-overview &
 #nitrogen --restore &
 #caffeine &
