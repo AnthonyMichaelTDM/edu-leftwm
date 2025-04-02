@@ -161,7 +161,7 @@
         // z
         (command: Execute, value: "archlinux-logout", 
             modifier: ["modkey"], key: "x"),
-        (command: Execute, value: "urxvt -e vim ~/.config/leftwm/config.ron",
+        (command: Execute, value: "alacritty -e vim ~/.config/leftwm/config.ron",
             modifier: ["modkey"], key: "c"),
         // v
         (command: Execute, value: "polybar-msg cmd toggle",

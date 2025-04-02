@@ -72,7 +72,7 @@ super + F12
 
 #Htop
 super + ctrl + h
-    urxvt 'htop task manager' -e htop
+    alacritty -T 'htop task manager' -e htop
 
 #arcolinux-logout
 super + x
@@ -110,14 +110,14 @@ super + f
 super + Escape
     xkill
 
-#urxvt
+#Terminal
 super + Return
-    urxvt
+    alacritty
 
 #Keyboard dependent
-#urxvt
+#Terminal
 super + KP_Enter
-	urxvt
+	alacritty
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -145,10 +145,6 @@ super + shift + KP_Enter
 # CONTROL + ALT KEYS
 #################################################################
 
-#arcolinux-welcome-app
-ctrl + alt + w
-     arcolinux-welcome-app
-
 #archlinux-tweak-tool
 ctrl + alt + e
     archlinux-tweak-tool
@@ -165,14 +161,6 @@ ctrl + alt + e
 ctrl + alt + b
      thunar
 
-#Catfish
-ctrl + alt + c
-     catfish
-
-#brave
-ctrl + alt + g
-    brave
-
 #Firefox
 ctrl + alt + f
      firefox
@@ -182,20 +170,8 @@ ctrl + alt + f
 #     nitrogen
 
 #archlinux-logout
-ctrl + alt + k
-     archlinux-logout
-
-#archlinux-logout
 ctrl + alt + l
     archlinux-logout
-
-#Pamac-manager
-ctrl + alt + p
-    pamac-manager
-
-#Xfce4-settings-manager
-ctrl + alt + m
-     xfce4-settings-manager
 
 #Pulse Audio Control
 ctrl + alt + u
@@ -208,10 +184,6 @@ ctrl + alt + r
 #Spotify
 #ctrl + alt + s
 #   spotify
-
-#urxvt
-ctrl + alt + t
-    urxvt
 
 #Vivaldi
 #ctrl + alt + v
@@ -285,32 +257,32 @@ ctrl + alt + KP_Enter
 #################################################################
 
 #Wallpaper trash
-alt + shift + t
-    variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + t
+#     variety -t && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper next
-alt + shift + n
-    variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + n
+#     variety -n && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper previous
-alt + shift + p
-    variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + p
+#     variety -p && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper favorite
-alt + shift + f
-    variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + f
+#     variety -f && wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #Wallpaper update
-alt + shift + u
-    wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
+# alt + shift + u
+#     wal -i $(cat $HOME/.config/variety/wallpaper/wallpaper.jpg.txt)&
 
 #################################################################
 # CONTROL + SHIFT KEYS
 #################################################################
 
 #Xcfe4-TaskManager
-ctrl + shift + Escape
-    xfce4-taskmanager
+# ctrl + shift + Escape
+#     xfce4-taskmanager
 
 
 #################################################################
@@ -319,7 +291,7 @@ ctrl + shift + Escape
 
 #Scrot
 Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+    xfce4-screenshooter -f
 
 #screenshooter
 ctrl + Print
