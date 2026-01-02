@@ -95,8 +95,8 @@ super + s
     st
 
 #thunar
-super + f
-    thunar
+#super + f
+#    thunar
 
 #Pavucontrol
 #super + v

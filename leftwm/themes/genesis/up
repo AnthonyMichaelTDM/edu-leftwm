@@ -12,7 +12,10 @@ ln -s $SCRIPTPATH/down /tmp/leftwm-theme-down
 sh $SCRIPTPATH/scripts/wal.sh
 ##############################################################################
 
-# keybindings daemon
+# keybindings daemon (restart if already running)
+if pgrep -x sxhkd; then
+  pkill -x sxhkd
+fi
 sxhkd -c ~/.config/leftwm/sxhkd/sxhkdrc &
 
 # diversity of apps to start (start only if they are not already running)
